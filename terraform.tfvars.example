@@ -1,0 +1,41 @@
+organization_key = "00000000-0000-0000-0000-000000000000"
+
+secret_key = "00000000-0000-0000-0000-000000000000"
+
+region = "par1"
+
+user = "root"
+
+dynamic_ip = "true"
+
+architecture = "x86_64"
+
+base_image_id = ""
+
+base_bootscript_id = ""
+
+scaleway_boot_type = "VC1L"
+
+scaleway_master_type = "VC1S"
+
+scaleway_slave_type = "VC1M"
+
+cluster_os = "K8S"
+
+cluster_name = "examplecluster-par1"
+
+cluster_master_count = "1"
+
+cluster_slave_count = "4"
+
+cluster_public_slave_count = "1"
+
+dcos_installer_url = ""
+
+user_ssh_key_path = "./cluster-key_rsa"
+
+user_ssh_public_key_path = "./cluster-key_rsa.pub"
+
+cluster_master_port = "24040"
+
+cluster_token = "000000.0000000000000000"
