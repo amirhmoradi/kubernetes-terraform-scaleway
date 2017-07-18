@@ -10,8 +10,8 @@ output "Use this link to access cluster dashboard" {
   value = "http://localhost:8001/ui/"
 }
 
-output "slave-ip" {
-  value = "${join(",", scaleway_server.cluster_slave.*.public_ip)}"
+output "agent-ip" {
+  value = "${join(",", scaleway_server.cluster_agent.*.public_ip)}"
 }
 
 output "master-ip" {

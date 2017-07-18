@@ -38,8 +38,8 @@ variable "base_bootscript_id" {
   default     = "00000000-0000-0000-0000-000000000000"
 }
 
-variable "scaleway_slave_type" {
-  description = "Instance type of Agent"
+variable "scaleway_boot_type" {
+  description = "Instance type of bootstrap unit"
   default     = "VC1S"
 }
 
@@ -48,8 +48,8 @@ variable "scaleway_master_type" {
   default     = "VC1S"
 }
 
-variable "scaleway_boot_type" {
-  description = "Instance type of bootstrap unit"
+variable "scaleway_agent_type" {
+  description = "Instance type of Agent"
   default     = "VC1S"
 }
 
@@ -63,7 +63,7 @@ variable "cluster_name" {
   default     = "scaleway-clustercloud"
 }
 
-variable "cluster_slave_count" {
+variable "cluster_agent_count" {
   description = "Number of agents to deploy"
   default     = "4"
 }
@@ -78,12 +78,12 @@ variable "cluster_master_count" {
   description = "Number of master nodes. 1, 3, or 5."
 }
 
-variable "slave_count" {
+variable "agent_count" {
   description = "Number of agents to deploy"
   default     = "4"
 }
 
-variable "public_slave_count" {
+variable "public_agent_count" {
   description = "Number of public agents to deploy"
   default     = "1"
 }
@@ -93,11 +93,6 @@ variable "user_ssh_public_key_path" {
   default     = "./scw.pub"
 }
 
-variable "cluster_installer_url" {
-  description = "Path to get DCOS"
-  default     = "https://downloads.dcos.io/dcos/EarlyAccess/dcos_generate_config.sh"
-}
-
 variable "user_ssh_key_path" {
   description = "Path to your private SSH key for the project"
   default     = "./scw"
@@ -105,5 +100,5 @@ variable "user_ssh_key_path" {
 
 variable "cluster_master_port" {
   description = "Bootstrap custom port (use more than 1025)"
-  default     = "50001"
+  default     = ["50001"]
 }

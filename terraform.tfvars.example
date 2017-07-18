@@ -18,7 +18,7 @@ scaleway_boot_type = "VC1L"
 
 scaleway_master_type = "VC1S"
 
-scaleway_slave_type = "VC1M"
+scaleway_agent_type = "VC1M"
 
 cluster_os = "K8S"
 
@@ -26,9 +26,9 @@ cluster_name = "examplecluster-par1"
 
 cluster_master_count = "1"
 
-cluster_slave_count = "4"
+cluster_agent_count = "4"
 
-cluster_public_slave_count = "1"
+cluster_public_agent_count = "1"
 
 dcos_installer_url = ""
 
